@@ -31,4 +31,4 @@ mkdir -p "$DOWNLOADS_DIR"
 export PROJECTS_DIR="$DEV_DIR/Projects"
 mkdir -p "$PROJECTS_DIR"
 
-export REPO_RAW_URL="https://raw.githubusercontent.com/shig07770/config/master"
+export REPO_RAW_URL="https://raw.githubusercontent.com/shig07770/linux-config/master"
