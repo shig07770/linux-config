@@ -1,7 +1,7 @@
 # debian/bookworm/presets/dev/all.sh - Development installation for Debian 12 (Bookworm)
 
 cd "$(dirname $0)/../.."
-source dirs.sh
+source vars.sh
 
 bash presets/dotfile.sh
 
@@ -12,7 +12,7 @@ bash dev/mariadb.sh
 bash dev/node.sh
 bash dev/py.sh
 
-bash dev/git.sh
+bash git.sh
 bash dev/vim.sh
 bash dev/vscode.sh
 

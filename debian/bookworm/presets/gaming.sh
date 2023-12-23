@@ -1,7 +1,7 @@
 # debian/bookworm/presets/gaming.sh - Gaming installation for Debian 12 (Bookworm)
 
 cd "$(dirname $0)/.."
-source dirs.sh
+source vars.sh
 
 bash presets/dotfile.sh
 

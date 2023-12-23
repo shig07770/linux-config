@@ -1,7 +1,7 @@
 # debian/bookworm/presets/full.sh - Complete installation for Debian 12 (Bookworm)
 
 cd "$(dirname $0)/.."
-source dirs.sh
+source vars.sh
 
 bash presets/dotfile.sh
 
@@ -19,15 +19,7 @@ bash util/vlc.sh
 bash util/wget.sh
 bash util/wine.sh
 
-bash dev/bruno.sh
-bash dev/cpp.sh
-bash dev/flutter.sh
-bash dev/git.sh
-bash dev/mariadb.sh
-bash dev/node.sh
-bash dev/py.sh
-bash dev/vim.sh
-bash dev/vscode.sh
+bash presets/dev/all.sh
 
 bash game/cutentr.sh
 bash game/discord.sh

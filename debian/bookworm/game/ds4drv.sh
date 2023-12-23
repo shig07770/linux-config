@@ -1,4 +1,4 @@
 cd "$(dirname $0)"
-source ../dirs.sh
+source ../vars.sh
 
 pipx install ds4drv
