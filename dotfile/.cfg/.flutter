@@ -1,5 +1,0 @@
-DEV_DIR="$HOME/Development"
-FLUTTER_BIN_DIR="$DEV_DIR/.flutter/bin"
-
-export PATH="$PATH:$FLUTTER_BIN_DIR"
-export CHROME_EXECUTABLE="/usr/bin/chromium"
