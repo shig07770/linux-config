@@ -1,6 +1,14 @@
 # shig07770/linux-config/debian/bookworm.sh - Linux configuration script for Debian 12 (Bookworm).
 # --------------------------------------------------------------------------
 
+# prevent running as root
+if [ $UID -eq 0 ]; then
+  echo "Script is running as root (UID is equal to 0) which is likely a mistake... Aborting."
+  exit 1
+fi
+
+# --------------------------------------------------------------------------
+
 export LINUX_CONFIG_ROOT="$(realpath $(dirname $0)/..)" # the root of the repo (edit if the file is moved)
 source "$LINUX_CONFIG_ROOT/home/.config/user-dirs.dirs" # access $XDG_GAMES_DIR, $XDG_MUSIC_DIR, ect. (do not remove)
 
