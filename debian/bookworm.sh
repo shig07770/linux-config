@@ -298,7 +298,7 @@ inst_gnupg() {
     %commit
 EOF
 
-  USER_GPG_KEY_ID="$(gpg --list-keys --with-colons "$git_email" | grep fpr --max-count 1 | sed "s/://g" | sed "s/fpr//g")"
+  USER_GPG_KEY_ID="$(gpg --list-keys --with-colons "$USER_EMAIL" | grep fpr --max-count 1 | sed "s/://g" | sed "s/fpr//g")"
 }
 
 inst_git() {
