@@ -65,20 +65,20 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # load bash aliases
 . ~/.bash_aliases
 
-# get access to variables like $XDG_DEVELOPMENT_DIR
+# get access to variables like $XDG_PROGRAMMING_DIR
 . ~/.config/user-dirs.dirs
 
 # pipx: add to $PATH
 export PATH="$PATH:$HOME/.local/bin"
 
 # Flutter: add to $PATH
-export PATH="$PATH:$XDG_DEVELOPMENT_DIR/.flutter/bin"
+export PATH="$PATH:$XDG_PROGRAMMING_DIR/.flutter/bin"
 
 # Flutter: define $CHROME_EXECUTABLE
 export CHROME_EXECUTABLE="/usr/bin/chromium"
 
 # nvm: define $NVM_DIR
-export NVM_DIR="$XDG_DEVELOPMENT_DIR/.nvm"
+export NVM_DIR="$XDG_PROGRAMMING_DIR/.nvm"
 
 # nvm: load nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

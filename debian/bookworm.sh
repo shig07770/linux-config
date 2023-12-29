@@ -20,14 +20,14 @@ export USER_GPG_KEY_ID=""                   # the generated GPG key's ID, this i
 
 # --------------------------------------------------------------------------
 
-export NVM_DIR="$XDG_DEVELOPMENT_DIR/.nvm" # where nvm (Node Version Manager) is installed [inst_nvm]
+export NVM_DIR="$XDG_PROGRAMMING_DIR/.nvm" # where nvm (Node Version Manager) is installed [inst_nvm]
 
 # --------------------------------------------------------------------------
 
-export FLUTTER_DIR="$XDG_DEVELOPMENT_DIR/.flutter"               # where Flutter is installed (warning: if you edit this, you have to edit the one in .bashrc) [inst_flutter, inst_flutter_sdk]
-export ANDROID_SDK_DIR="$XDG_DEVELOPMENT_DIR/.android/sdk"       # where the Android SDK is installed [inst_flutter, inst_android_studio]
+export FLUTTER_DIR="$XDG_PROGRAMMING_DIR/.flutter"               # where Flutter is installed (warning: if you edit this, you have to edit the one in .bashrc) [inst_flutter, inst_flutter_sdk]
+export ANDROID_SDK_DIR="$XDG_PROGRAMMING_DIR/.android/sdk"       # where the Android SDK is installed [inst_flutter, inst_android_studio]
 export ANDROID_CLI_TOOLS_DIR="$ANDROID_SDK_DIR/cmdline-tools"    # where the Android CLI tools are installed (do not edit) [inst_flutter, inst_android_studio]
-export ANDROID_STUDIO_DIR="$XDG_DEVELOPMENT_DIR/.android/studio" # where Android Studio is installed [inst_flutter, inst_android_studio]
+export ANDROID_STUDIO_DIR="$XDG_PROGRAMMING_DIR/.android/studio" # where Android Studio is installed [inst_flutter, inst_android_studio]
 
 # --------------------------------------------------------------------------
 
@@ -158,9 +158,9 @@ user_dirs() {
   mkdir -p "$XDG_DOWNLOAD_DIR"
   mkdir -p "$XDG_TEMPLATES_DIR"
   mkdir -p "$XDG_DOCUMENTS_DIR"
-  mkdir -p "$XDG_DEVELOPMENT_DIR"
+  mkdir -p "$XDG_PROGRAMMING_DIR"
   mkdir -p "$XDG_PUBLICSHARE_DIR"
-  mkdir -p "$XDG_DEVELOPMENT_PROJECTS_DIR"
+  mkdir -p "$XDG_PROGRAMMING_PROJECTS_DIR"
 
   cp --force "$LINUX_CONFIG_ROOT/home/.config/user-dirs.dirs" ~/.config/user-dirs.dirs
   cp --force "$LINUX_CONFIG_ROOT/home/.config/user-dirs.locale" ~/.config/user-dirs.locale
