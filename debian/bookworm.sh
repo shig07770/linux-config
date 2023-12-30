@@ -447,8 +447,8 @@ inst_android_studio() {
 
   pushd "$XDG_DOWNLOAD_DIR"
 
-  wget -O android-studio.tar.xz "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2023.1.1.26/android-studio-2023.1.1.26-linux.tar.gz"
-  tar xf android-studio.tar.xz
+  wget -O android-studio.tar.gz "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2023.1.1.26/android-studio-2023.1.1.26-linux.tar.gz"
+  tar xf android-studio.tar.gz
   mv android-studio "$ANDROID_STUDIO_DIR"
 
   echo "Configurating the Android SDK..."
@@ -471,7 +471,6 @@ inst_android_studio() {
   mv "$ANDROID_CLI_TOOLS_DIR/NOTICE.txt" "$ANDROID_CLI_TOOLS_DIR/latest/"
   mv "$ANDROID_CLI_TOOLS_DIR/source.properties" "$ANDROID_CLI_TOOLS_DIR/latest/"
 
-  rm android-studio.tar.xz "$ANDROID_SDK_DIR/android-studio-cli-tools.zip"
   popd # pushd "$XDG_DOWNLOAD_DIR"
 }
 
