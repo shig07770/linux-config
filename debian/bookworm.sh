@@ -460,10 +460,10 @@ inst_android_studio() {
   chmod +x "$ANDROID_STUDIO_DIR/bin/studio.sh"
   "$ANDROID_STUDIO_DIR/bin/studio.sh" >/dev/null 2>&1
 
-  wget -O "$ANDROID_SDK_DIR/android-studio-cli-tools.zip" "https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip"
-  unzip "$ANDROID_SDK_DIR/android-studio-cli-tools.zip"
+  wget -O android-studio-cli-tools.zip "https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip"
+  unzip android-studio-cli-tools.zip
 
-  mv "cmdline-tools" "$ANDROID_SDK_DIR"
+  mv cmdline-tools "$ANDROID_SDK_DIR"
 
   mkdir -p "$ANDROID_CLI_TOOLS_DIR/latest/"
   mv "$ANDROID_CLI_TOOLS_DIR/bin/" "$ANDROID_CLI_TOOLS_DIR/latest/"
