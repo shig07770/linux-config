@@ -449,7 +449,7 @@ inst_android_studio() {
 
   wget -O android-studio.tar.gz "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2023.1.1.26/android-studio-2023.1.1.26-linux.tar.gz"
   tar xf android-studio.tar.gz
-  mv android-studio "$ANDROID_STUDIO_DIR"
+  mv android-studio/* "$ANDROID_STUDIO_DIR"
 
   echo "Configurating the Android SDK..."
   echo "Select a custom installation"
