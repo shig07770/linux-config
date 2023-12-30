@@ -508,7 +508,7 @@ inst_flutter() {
   flutter config --android-sdk="$ANDROID_SDK_DIR"
   flutter config --android-studio-dir="$ANDROID_STUDIO_DIR"
 
-  # Now, you may run flutter doctor --verbose and it should succeed.
+  flutter doctor --verbose && flutter upgrade
 }
 
 inst_cutentr() {
