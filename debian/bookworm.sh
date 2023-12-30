@@ -466,10 +466,7 @@ inst_android_studio() {
   mv cmdline-tools "$ANDROID_SDK_DIR"
 
   mkdir -p "$ANDROID_CLI_TOOLS_DIR/latest/"
-  mv "$ANDROID_CLI_TOOLS_DIR/bin/" "$ANDROID_CLI_TOOLS_DIR/latest/"
-  mv "$ANDROID_CLI_TOOLS_DIR/lib/" "$ANDROID_CLI_TOOLS_DIR/latest/"
-  mv "$ANDROID_CLI_TOOLS_DIR/NOTICE.txt" "$ANDROID_CLI_TOOLS_DIR/latest/"
-  mv "$ANDROID_CLI_TOOLS_DIR/source.properties" "$ANDROID_CLI_TOOLS_DIR/latest/"
+  mv "$ANDROID_CLI_TOOLS_DIR"/* "$ANDROID_CLI_TOOLS_DIR/latest"
 
   popd # pushd "$XDG_DOWNLOAD_DIR"
 }
