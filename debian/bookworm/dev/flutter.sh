@@ -48,8 +48,6 @@ mv "$ANDROID_CLI_TOOLS_DIR/lib/" "$ANDROID_CLI_TOOLS_DIR/latest/"
 mv "$ANDROID_CLI_TOOLS_DIR/NOTICE.txt" "$ANDROID_CLI_TOOLS_DIR/latest/"
 mv "$ANDROID_CLI_TOOLS_DIR/source.properties" "$ANDROID_CLI_TOOLS_DIR/latest/"
 
-"$ANDROID_CLI_TOOLS_DIR/latest/bin/sdkmanager" --install "cmdline-tools;latest"
-
 # Flutter prerequisites (https://docs.flutter.dev/get-started/install/linux#linux-prerequisites)
 sudo apt install clang ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev
 
