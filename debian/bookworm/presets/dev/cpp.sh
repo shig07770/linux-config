@@ -1,13 +1,13 @@
 # debian/bookworm/presets/dev/cpp.sh - C/C++ development installation for Debian 12 (Bookworm)
 
 cd "$(dirname $0)/../.."
-source dirs.sh
+source vars.sh
 
 bash presets/dotfile.sh
 
 bash dev/cpp.sh
 
-bash dev/git.sh
+bash git.sh
 bash dev/vim.sh
 bash dev/vscode.sh
 

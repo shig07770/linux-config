@@ -31,4 +31,7 @@ mkdir -p "$DOWNLOADS_DIR"
 export PROJECTS_DIR="$DEV_DIR/Projects"
 mkdir -p "$PROJECTS_DIR"
 
+export GIT_NAME="shig07770"
+export GIT_EMAIL="shig07770+dev@gmail.com"
+
 export REPO_RAW_URL="https://raw.githubusercontent.com/shig07770/linux-config/master"

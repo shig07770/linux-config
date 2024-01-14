@@ -1,5 +1,5 @@
 cd "$(dirname $0)"
-source ../dirs.sh
+source ../vars.sh
 
 bash ../util/wget.sh
 

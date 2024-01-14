@@ -1,13 +1,13 @@
 # debian/bookworm/presets/dev/flutter.sh - Flutter development installation for Debian 12 (Bookworm)
 
 cd "$(dirname $0)/../.."
-source dirs.sh
+source vars.sh
 
 bash presets/dotfile.sh
 
 bash dev/flutter.sh
 
-bash dev/git.sh
+bash git.sh
 bash dev/vim.sh
 bash dev/vscode.sh
 

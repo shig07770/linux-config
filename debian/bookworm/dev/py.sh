@@ -1,5 +1,5 @@
 cd "$(dirname $0)"
-source ../dirs.sh
+source ../vars.sh
 
 sudo apt install python3 python3-pip pipx
 pipx install notebook

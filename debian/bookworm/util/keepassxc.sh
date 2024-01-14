@@ -1,4 +1,4 @@
 cd "$(dirname $0)"
-source ../dirs.sh
+source ../vars.sh
 
 sudo apt install keepassxc
