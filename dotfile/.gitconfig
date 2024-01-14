@@ -1,0 +1,10 @@
+[alias]
+whoami = config --get user.email
+[core]
+editor = vim
+[tag]
+gpgSign = true
+[commit]
+gpgSign = true
+[init]
+defaultbranch = master
