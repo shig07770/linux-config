@@ -48,6 +48,7 @@ export RCLONE_REMOTE_NAME="rmt" # the name for the rclone remote, this is NOT en
 minimal() {
   user_dirs
   bash_setup
+  groups_setup
 
   inst_tar
   inst_sed
@@ -121,6 +122,29 @@ preset_full() {
 }
 
 # --------------------------------------------------------------------------
+
+groups_setup() {
+  USER_USERNAME=$(whoami)
+
+  sudo adduser "$USER_USERNAME" adm
+  sudo adduser "$USER_USERNAME" audio
+  sudo adduser "$USER_USERNAME" bluetooth
+  sudo adduser "$USER_USERNAME" cdrom
+  sudo adduser "$USER_USERNAME" fax
+  sudo adduser "$USER_USERNAME" floppy
+  sudo adduser "$USER_USERNAME" kvm
+  sudo adduser "$USER_USERNAME" lp
+  sudo adduser "$USER_USERNAME" lpadmin
+  sudo adduser "$USER_USERNAME" netdev
+  sudo adduser "$USER_USERNAME" plugdev
+  sudo adduser "$USER_USERNAME" render
+  sudo adduser "$USER_USERNAME" scanner
+  sudo adduser "$USER_USERNAME" systemd-journal
+  sudo adduser "$USER_USERNAME" tape
+  sudo adduser "$USER_USERNAME" users
+  sudo adduser "$USER_USERNAME" video
+  sudo adduser "$USER_USERNAME" voice
+}
 
 user_dirs() {
   # Creates and sets up notable notable user directories (ie, "Music", "Videos")
