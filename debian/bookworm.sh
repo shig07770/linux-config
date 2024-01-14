@@ -438,7 +438,7 @@ inst_android_studio() {
   # Installs the Android CLI tools in $ANDROID_CLI_TOOLS_DIR.
   # Installs Android Studio (the official IDE for Android app development) in $ANDROID_STUDIO_DIR.
   # Depends on wget, tar, unzip.
-  mkdir -p "$ANDROID_DIR" "$ANDROID_SDK_DIR"
+  mkdir -p "$ANDROID_SDK_DIR"
 
   sudo apt install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 # prerequisites
 
