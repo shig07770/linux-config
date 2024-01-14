@@ -1,2 +1,0 @@
-PIPX_BIN_DIR="$HOME/.local/bin"
-export PATH="$PATH:$PIPX_BIN_DIR"
