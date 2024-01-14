@@ -235,7 +235,7 @@ inst_rclone() {
   # Installs rclone (syncs your files to cloud storage).
   # Also runs rclone setup to add a first remote storage.
   # Depends on wget, unzip.
-  pushd /tmp
+  pushd "$XDG_DOWNLOAD_DIR"
 
   wget -O rclone-current-linux-amd64.zip "https://downloads.rclone.org/rclone-current-linux-amd64.zip"
   unzip rclone-current-linux-amd64.zip
@@ -263,7 +263,7 @@ inst_rclone() {
   rclone copy "$RCLONE_REMOTE_NAME:/Documents/" "$XDG_DOCUMENTS_DIR"
   rclone copy "$RCLONE_REMOTE_NAME:/Templates/ ""$XDG_TEMPLATES_DIR"
 
-  popd # pushd /tmp
+  popd # pushd "$XDG_DOWNLOAD_DIR"
 }
 
 inst_flatpak() {
@@ -359,14 +359,14 @@ inst_notebook() {
 inst_bruno() {
   # Installs Bruno (Open-source IDE for exploring and testing APIs).
   # Depends on wget.
-  pushd /tmp
+  pushd "$XDG_DOWNLOAD_DIR"
 
   wget -O bruno.deb https://github.com/usebruno/bruno/releases/download/v1.5.1/bruno_1.5.1_amd64_linux.deb
 
   sudo dpkg -i bruno.deb
   sudo apt install -f
 
-  popd # pushd /tmp
+  popd # pushd "$XDG_DOWNLOAD_DIR"
 }
 
 inst_gcc() {
@@ -409,7 +409,7 @@ inst_nvm() {
 inst_code() {
   # Installs code (Visual Studio Code).
   # Depends on wget.
-  pushd /tmp
+  pushd "$XDG_DOWNLOAD_DIR"
 
   wget -O vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 
@@ -433,7 +433,7 @@ inst_code() {
   mkdir -p ~/.config/Code/User/
   cp --force "$LINUX_CONFIG_ROOT/home/.config/Code/User/settings.json" ~/.config/Code/User/settings.json
 
-  popd # pushd /tmp
+  popd # pushd "$XDG_DOWNLOAD_DIR"
 }
 
 inst_android_studio() {
@@ -445,7 +445,7 @@ inst_android_studio() {
 
   sudo apt install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386 # prerequisites
 
-  pushd /tmp
+  pushd "$XDG_DOWNLOAD_DIR"
 
   wget -O android-studio.tar.xz "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2023.1.1.26/android-studio-2023.1.1.26-linux.tar.gz"
   tar xf android-studio.tar.xz
@@ -472,7 +472,7 @@ inst_android_studio() {
   mv "$ANDROID_CLI_TOOLS_DIR/source.properties" "$ANDROID_CLI_TOOLS_DIR/latest/"
 
   rm android-studio.tar.xz "$ANDROID_SDK_DIR/android-studio-cli-tools.zip"
-  popd # pushd /tmp
+  popd # pushd "$XDG_DOWNLOAD_DIR"
 }
 
 inst_flutter_sdk() {
@@ -483,7 +483,7 @@ inst_flutter_sdk() {
   # Either run inst_flutter or run inst_android_studio and configure Flutter yourself.
 
   # Depends on wget, tar.
-  pushd /tmp
+  pushd "$XDG_DOWNLOAD_DIR"
 
   sudo apt install clang ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev # prerequisites
 
@@ -493,7 +493,7 @@ inst_flutter_sdk() {
 
   rm flutter.tar.xz
 
-  popd # pushd /tmp
+  popd # pushd "$XDG_DOWNLOAD_DIR"
 }
 
 inst_flutter() {
@@ -518,38 +518,38 @@ inst_flutter() {
 inst_cutentr() {
   # Installs CuteNTR (a cross platform debugger and streaming client for NTR CFW for 3DS).
   # Depends on wget, flatpak.
-  pushd /tmp
+  pushd "$XDG_DOWNLOAD_DIR"
 
   wget -O cutentr.flatpak https://gitlab.com/BoltsJ/cuteNTR/uploads/da6b5bafbab68b45cc9bee0ae590a3ca/com.gitlab.BoltsJ.cuteNTR.flatpak
   flatpak install ./cutentr.flatpak
 
-  popd # pushd /tmp
+  popd # pushd "$XDG_DOWNLOAD_DIR"
 }
 
 inst_discord() {
   # Installs Discord (social media for chronically online people).
   # Depends on wget.
-  pushd /tmp
+  pushd "$XDG_DOWNLOAD_DIR"
 
   wget -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
 
   sudo dpkg -i discord.deb
   sudo apt install -f
 
-  popd # pushd /tmp
+  popd # pushd "$XDG_DOWNLOAD_DIR"
 }
 
 inst_steam() {
   # Installs Steam (the ultimate online game platform).
   # Depends on wget.
-  pushd /tmp
+  pushd "$XDG_DOWNLOAD_DIR"
 
   wget -O steam.deb https://cdn.akamai.steamstatic.com/client/installer/steam.deb
 
   sudo dpkg -i steam.deb
   sudo apt install -f
 
-  popd # pushd /tmp
+  popd # pushd "$XDG_DOWNLOAD_DIR"
 }
 
 inst_java() {
@@ -576,7 +576,7 @@ inst_minecraft() {
   # Installs Minecraft (stupid block game written in Java).
   # Downloads the Fabric Loader installer.
   # Depends on wget, java-common.
-  pushd /tmp
+  pushd "$XDG_DOWNLOAD_DIR"
 
   wget -O minecraft.deb https://launcher.mojang.com/download/Minecraft.deb
   wget -O "$XDG_DOWNLOAD_DIR/fabric-loader.jar" https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.11.2/fabric-installer-0.11.2.jar
@@ -586,7 +586,7 @@ inst_minecraft() {
   sudo dpkg -i minecraft.deb
   sudo apt install -f
 
-  popd # pushd /tmp
+  popd # pushd "$XDG_DOWNLOAD_DIR"
 }
 
 inst_obs() {
@@ -597,7 +597,7 @@ inst_obs() {
 inst_citra() {
   # Installs citra (Nintendo 3DS emulator) by running the Citra setup executable.
   # Depends on wget.
-  pushd /tmp
+  pushd "$XDG_DOWNLOAD_DIR"
 
   wget -O citra https://github.com/citra-emu/citra-web/releases/download/2.0/citra-setup-linux
   chmod +x citra
@@ -607,7 +607,7 @@ inst_citra() {
 
   ./citra >/dev/null 2>&1
 
-  popd # pushd /tmp
+  popd # pushd "$XDG_DOWNLOAD_DIR"
 }
 
 inst_ds4drv() {
