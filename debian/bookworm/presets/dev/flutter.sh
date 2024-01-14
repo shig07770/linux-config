@@ -23,4 +23,3 @@ bash util/tar.sh
 bash util/unzip.sh
 bash util/vlc.sh
 bash util/wget.sh
-bash util/wine.sh
