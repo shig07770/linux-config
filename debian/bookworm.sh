@@ -313,8 +313,8 @@ inst_git() {
 
   cp --force "$LINUX_CONFIG_ROOT/home/.gitconfig" ~/.gitconfig
 
-	git config --global user.email "$USER_EMAIL"
-	git config --global user.name "$USER_NAME"
+  git config --global user.email "$USER_EMAIL"
+  git config --global user.name "$USER_NAME"
 
   git config --global --unset gpg.format
   git config --global user.signingkey "$USER_GPG_KEY_ID"
