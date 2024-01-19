@@ -1,4 +1,4 @@
-# `shig07770/linux-config`
+# Linux Config
 Dotfiles and scripts to quickly get started with a new Linux computer.
 
 > If you want to use these dotfiles/scripts, you should probably fork the repository, review the code and files and change them according to your needs. Use at your own risk.
