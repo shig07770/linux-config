@@ -1,32 +1,48 @@
 {
-  "workbench.iconTheme": "vscode-icons",
+  "window.zoomLevel": -1,
+  "editor.mouseWheelZoom": true,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  /* General formatting rules */
+  "files.eol": "\n",
+  "editor.tabSize": 2,
   "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "files.insertFinalNewline": true,
+  "editor.detectIndentation": false,
+  /* HTTP setup */
   "http.proxy": "",
   "http.proxyAuthorization": null,
   "http.proxyStrictSSL": false,
+  /* HTML */
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "window.zoomLevel": -1,
-  "files.insertFinalNewline": true,
-  "files.eol": "\n",
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.detectIndentation": false,
-  "editor.mouseWheelZoom": true,
-  "C_Cpp.inlayHints.parameterNames.enabled": true,
-  "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
-  "python.analysis.inlayHints.functionReturnTypes": true,
-  "python.analysis.inlayHints.pytestParameters": true,
+  /* Python */
   "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
   "python.analysis.inlayHints.callArgumentNames": "all",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  /* JS */
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
   "javascript.inlayHints.enumMemberValues.enabled": true,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
-  "javascript.inlayHints.parameterNames.enabled": "all",
-  "javascript.inlayHints.parameterTypes.enabled": true,
   "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
-  "javascript.inlayHints.variableTypes.enabled": true,
+  /* TS */
   "typescript.inlayHints.parameterNames.enabled": "all",
-  "editor.unicodeHighlight.nonBasicASCII": false,
-  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, UseTab: Never, BreakBeforeBraces: Attach, IndentWidth: 2 }"
+  /* C/C++ */
+  "C_Cpp.inlayHints.parameterNames.enabled": true,
+  "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, UseTab: Never, BreakBeforeBraces: Attach, IndentWidth: 2 }",
+  /* Extension: Live Server */
+  "liveServer.settings.donotVerifyTags": true,
+  /* Extension: VS Code Icons */
+  "workbench.iconTheme": "vscode-icons",
+  /* Extension: Background */
+  "background.customImages": [
+    "https://i.ibb.co/KVT02Dz/code-bg.png"
+  ],
+  /* Extension: Ayu (Theme) */
+  "workbench.colorTheme": "Ayu Dark",
 }

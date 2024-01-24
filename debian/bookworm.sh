@@ -417,14 +417,19 @@ inst_code() {
   sudo apt install -f
 
   code --install-extension Vue.volar --force
+  code --install-extension teabyii.ayu --force
   code --install-extension vscodevim.vim --force
   code --install-extension ms-python.python --force
   code --install-extension Dart-Code.flutter --force
   code --install-extension ms-toolsai.jupyter --force
-  code --install-extension alexcvzz.vscode-sqlite --force
+  code --install-extension qwtel.sqlite-viewer --force
+  code --install-extension shalldie.background --force
+  code --install-extension ritwickdey.LiveServer --force
+  code --install-extension tamasfe.even-better-toml --force
   code --install-extension ms-vscode.makefile-tools --force
   code --install-extension foxundermoon.shell-format --force
   code --install-extension bradlc.vscode-tailwindcss --force
+  code --install-extension slevesque.vscode-zipexplorer --force
   code --install-extension vscode-icons-team.vscode-icons --force
   code --install-extension Vue.vscode-typescript-vue-plugin --force
   code --install-extension ms-vscode.vscode-typescript-next --force
