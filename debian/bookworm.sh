@@ -47,7 +47,6 @@ export RCLONE_REMOTE_NAME="rmt" # the name for the rclone remote, this is NOT en
 # Minimal setup: what I want (at least) on ALL of my computers
 minimal() {
   user_dirs
-  bash_setup
   groups_setup
 
   inst_tar
@@ -122,6 +121,14 @@ preset_full() {
 }
 
 # --------------------------------------------------------------------------
+inst_zsh() {
+  cp --force "$LINUX_CONFIG_ROOT/home/.zshrc" ~/.zshrc
+
+  sudo apt install zsh
+  sudo apt install fonts-powerline
+
+  chsh -s $(which zsh)
+}
 
 groups_setup() {
   USER_USERNAME=$(whoami)
@@ -167,14 +174,6 @@ user_dirs() {
 
   xdg-user-dirs-update
   xdg-user-dirs-gtk-update
-}
-
-bash_setup() {
-  # Copies special bash files (ie, ~/.bashrc, ~/.bash_profile).
-  cp --force "$LINUX_CONFIG_ROOT/home/.bashrc" ~/.bashrc
-  cp --force "$LINUX_CONFIG_ROOT/home/.bash_logout" ~/.bash_logout
-  cp --force "$LINUX_CONFIG_ROOT/home/.bash_aliases" ~/.bash_aliases
-  cp --force "$LINUX_CONFIG_ROOT/home/.bash_profile" ~/.bash_profile
 }
 
 # --------------------------------------------------------------------------
@@ -398,7 +397,7 @@ inst_nvm() {
   # Installs nvm (Node Version Manager) in $NVM_DIR.
   # Depends on wget.
   mkdir -p "$NVM_DIR"
-  wget -qO- "https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh" | bash
+  export PROFILE=/dev/null && wget -qO- "https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh" | bash
 
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
