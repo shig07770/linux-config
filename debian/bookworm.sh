@@ -124,12 +124,12 @@ preset_full() {
 
 # --------------------------------------------------------------------------
 inst_zsh() {
-  cp --force "$LINUX_CONFIG_ROOT/home/.zshrc" ~/.zshrc
-
   sudo apt install zsh
   sudo apt install fonts-powerline
+  
+  cp --force "$LINUX_CONFIG_ROOT/home/.zshrc" ~/.zshrc
 
-  chsh -s $(which zsh)
+  export RUNZSH="no" && export KEEP_ZSHRC="yes" && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
 groups_setup() {
