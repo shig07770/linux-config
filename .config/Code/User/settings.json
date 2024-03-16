@@ -5,7 +5,7 @@
   /* General formatting rules */
   "files.eol": "\n",
   "editor.tabSize": 2,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.insertSpaces": true,
   "files.insertFinalNewline": true,
   "editor.detectIndentation": false,
@@ -41,8 +41,11 @@
   "workbench.iconTheme": "vscode-icons",
   /* Extension: Background */
   "background.customImages": [
-    "https://i.ibb.co/KVT02Dz/code-bg.png"
+    "file:///home/shig07770/.config/Code/User/d81d24145f5b50b57f71d6239e9c52dc.png"
   ],
   /* Extension: Ayu (Theme) */
   "workbench.colorTheme": "Ayu Dark",
+  "files.associations": {
+    "*.h": "c"
+  },
 }

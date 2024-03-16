@@ -3,8 +3,8 @@ whoami = config --get user.email
 [core]
 editor = vim
 [tag]
-gpgSign = true
+gpgsign = true
 [commit]
-gpgSign = true
+gpgsign = true
 [init]
 defaultbranch = master
